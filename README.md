@@ -134,8 +134,6 @@ Walkthrough prompts: [docs/DEMO.md](docs/DEMO.md).
 
 - Demo CVs are text-based PDFs or TXT (seed script + sample fixtures cover the happy path).
 - Role context (title, required skills, min years) comes from the recruiter utterance / defaults in the chat router when not spelled out.
-- Agentforce features are already enabled on the target DE; metadata alone doesn’t turn the product on everywhere.
-- Duplicate people (e.g. several “Youssef Mohamed” cards from re-uploads) are collapsed by first name when ranking/comparing from chat.
 
 ---
 
