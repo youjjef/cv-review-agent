@@ -1,0 +1,21 @@
+Sara Hassan
+Email: sara.hassan@email.com
+Phone: +20 100 555 0101
+Location: Cairo, Egypt
+https://www.linkedin.com/in/sarahassan
+
+Summary
+Salesforce developer with 6 years of experience building Lightning apps and integrations.
+
+Skills
+Apex, LWC, SOQL, REST Integrations, JavaScript, Salesforce, Git
+
+Experience
+Senior Salesforce Developer - Clouding AI - 2021 - Present
+- Designed Agentforce-ready Apex services and LWC workspaces
+- Led CV screening automation PoC
+Salesforce Developer - Nile Tech - 2018 - 2021
+- Built trigger frameworks and integration layer
+
+Education
+Cairo University | BSc Computer Science | 2017

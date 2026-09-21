@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0B6BCB</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>CV Review Agent workspace for recruiters</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>CV Review Agent</label>
+    <navType>Standard</navType>
+    <tabs>Candidate__c</tabs>
+    <tabs>CV_Workspace</tabs>
+    <tabs>CV_Ask_Agent</tabs>
+    <tabs>Candidate_Bookmark__c</tabs>
+    <tabs>Agent_Decision_Log__c</tabs>
+    <tabs>standard-File</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

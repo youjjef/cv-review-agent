@@ -1,0 +1,84 @@
+{
+  "required": ["operation"],
+  "unevaluatedProperties": false,
+  "properties": {
+    "operation": {
+      "title": "Operation",
+      "description": "One of: listCandidates, getCandidateCard, listDataIssues, searchCandidateFacts, scoreForRole, compareCandidates, bookmarkCandidate",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "candidateId": {
+      "title": "Candidate Id",
+      "description": "Salesforce Id of Candidate__c when operating on one candidate",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "candidateIdsCsv": {
+      "title": "Candidate Ids CSV",
+      "description": "Comma-separated Candidate Ids for compareCandidates",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "roleTitle": {
+      "title": "Role Title",
+      "description": "Target role for scoring/comparison/bookmarking",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "requiredSkillsCsv": {
+      "title": "Required Skills CSV",
+      "description": "Comma-separated required skills",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "minYears": {
+      "title": "Minimum Years",
+      "description": "Minimum years of experience required",
+      "lightning:type": "lightning__integerType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "educationKeywordsCsv": {
+      "title": "Education Keywords CSV",
+      "description": "Preferred education keywords",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "searchQuery": {
+      "title": "Search Query",
+      "description": "Natural language question answered only from stored Candidate Card fields",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "recruiterNotes": {
+      "title": "Recruiter Notes",
+      "description": "Optional notes when bookmarking a candidate",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "evaluationScore": {
+      "title": "Evaluation Score",
+      "description": "Optional score override when bookmarking",
+      "lightning:type": "lightning__numberType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    },
+    "evaluationReasoning": {
+      "title": "Evaluation Reasoning",
+      "description": "Optional reasoning override when bookmarking",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    }
+  },
+  "lightning:type": "lightning__objectType"
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when the user needs answers to questions about one or more candidates, based solely on evidenced data from Candidate Cards.</description>
+    <developerName>p_16jak000003HbuH_Grounded_CV_QandA</developerName>
+    <genAiFunctions>
+        <functionName>CV_Review_Agent_Action</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Always call CV_Review_Agent_Action with operation set exactly to searchCandidateFacts, plus candidateId and searchQuery. Relay message/payloadJson only. If evidence is missing, say it is not found in the CV.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Never invent Candidate Card facts and do not use Knowledge actions.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jak000003HbuH_Grounded_CV_QandA</localDeveloperName>
+    <masterLabel>Grounded CV QandA</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only answer recruiter questions about candidates using evidence from stored Candidate Cards. You aren&apos;t able to provide answers outside the data available in the Candidate Cards.</scope>
+</GenAiPlugin>

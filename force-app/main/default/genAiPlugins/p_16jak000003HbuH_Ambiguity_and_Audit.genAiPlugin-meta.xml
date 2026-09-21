@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is chosen when the user needs to identify missing, uncertain, or conflicting data in Candidate Cards or rely on audit logs for decision-making.</description>
+    <developerName>p_16jak000003HbuH_Ambiguity_and_Audit</developerName>
+    <genAiFunctions>
+        <functionName>CV_Review_Agent_Action</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Call CV_Review_Agent_Action with operation=listDataIssues and candidateId. Surface Missing, Uncertain, and Conflicting issues from the payload.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Mention that scoring and bookmark actions write Agent_Decision_Log__c rows for auditability. Never invent Candidate Card facts and do not use Knowledge actions.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jak000003HbuH_Ambiguity_and_Audit</localDeveloperName>
+    <masterLabel>Ambiguity and Audit</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only surface missing, uncertain, and conflicting data in Candidate Cards and provide auditability of actions through decision logs. You aren&apos;t able to resolve data issues directly.</scope>
+</GenAiPlugin>

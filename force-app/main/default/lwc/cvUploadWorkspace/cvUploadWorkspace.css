@@ -1,0 +1,17 @@
+.cv-pre {
+    white-space: pre-wrap;
+    font-family: var(--lwc-fontFamily, inherit);
+    background: #f3f3f3;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    max-height: 12rem;
+    overflow: auto;
+}
+
+.slds-file-selector__body {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+

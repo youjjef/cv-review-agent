@@ -1,0 +1,18 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.sf": true,
+    "**/.sfdx": true
+  },
+  "xml.preferences.showSchemaDocumentationType": "none",
+  "xml.server.preferBinary": true,
+  "xml.server.vmargs": "-Xmx2048M",
+  "xml.validation.schema.enabled": "never",
+  "xml.validation.namespaces.enabled": "never",
+  "files.associations": {
+    "*.cls-meta.xml": "xml",
+    "*.trigger-meta.xml": "xml",
+    "*-meta.xml": "xml"
+  }
+}

@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Ask CV Review Agent" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <p class="slds-text-body_regular slds-m-bottom_small">
+                Ask about candidates, compare them for a role, or bookmark a recommendation.
+            </p>
+
+            <div class="slds-m-bottom_medium">
+                <lightning-button label="Reset conversation" onclick={handleReset}></lightning-button>
+            </div>
+
+            <div class="chat-log slds-box slds-theme_shade slds-m-bottom_small">
+                <template for:each={messages} for:item="m">
+                    <div key={m.id} class={m.cssClass}>
+                        <div class="slds-text-title_caps slds-m-bottom_xx-small">{m.roleLabel}</div>
+                        <div class="slds-text-body_regular message-body">{m.text}</div>
+                    </div>
+                </template>
+                <template lwc:if={busy}>
+                    <div class="slds-text-body_small slds-m-top_x-small">Thinking…</div>
+                </template>
+            </div>
+
+            <lightning-textarea
+                label="Message"
+                value={draft}
+                onchange={handleDraftChange}
+                placeholder="Ask a question about your Candidate Cards…"
+                max-length="1000"
+            ></lightning-textarea>
+            <div class="slds-m-top_small">
+                <lightning-button
+                    variant="brand"
+                    label="Send"
+                    onclick={handleSend}
+                    disabled={sendDisabled}
+                ></lightning-button>
+            </div>
+
+            <template lwc:if={error}>
+                <div class="slds-text-color_error slds-m-top_small">{error}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

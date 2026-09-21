@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when the user wants to bookmark candidates after evaluation, including adding scores, reasoning, role context, and notes.</description>
+    <developerName>p_16jak000003HbuH_Bookmark_Candidates</developerName>
+    <genAiFunctions>
+        <functionName>CV_Review_Agent_Action</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Call CV_Review_Agent_Action with operation=bookmarkCandidate, candidateId, roleTitle, requiredSkillsCsv, minYears, and recruiterNotes. Confirm using the returned recordId and message.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Never invent Candidate Card facts and do not use Knowledge actions.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jak000003HbuH_Bookmark_Candidates</localDeveloperName>
+    <masterLabel>Bookmark Candidates</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only create Candidate Bookmarks with overviews, scores, reasoning, role context, and recruiter notes. You aren&apos;t able to alter existing bookmarks.</scope>
+</GenAiPlugin>

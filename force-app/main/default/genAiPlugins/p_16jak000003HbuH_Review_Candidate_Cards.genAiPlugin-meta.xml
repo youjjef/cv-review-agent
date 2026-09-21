@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when the user needs to list candidates or retrieve structured Candidate Cards containing details such as skills, experience, education, and data issues.</description>
+    <developerName>p_16jak000003HbuH_Review_Candidate_Cards</developerName>
+    <genAiFunctions>
+        <functionName>CV_Review_Agent_Action</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Always call CV_Review_Agent_Action. Set the required input operation exactly to one of: listCandidates, getCandidateCard, listDataIssues. For list requests set operation=listCandidates with no candidateId.</description>
+        <developerName>instruction_ops</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ops</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user asks to list candidates or who is available, call CV_Review_Agent_Action with operation set to listCandidates and relay the returned message and payloadJson.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user requests details of a specific candidate, call CV_Review_Agent_Action with operation=getCandidateCard and candidateId set to the Candidate__c Id.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+        <sortOrder>2</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user inquires about data issues or ambiguity, call CV_Review_Agent_Action with operation=listDataIssues and candidateId.</description>
+        <developerName>instruction_2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2</masterLabel>
+        <sortOrder>3</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Never invent Candidate Card facts. Use only success/message/payloadJson from CV_Review_Agent_Action. Do not use Knowledge actions.</description>
+        <developerName>instruction_grounding</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_grounding</masterLabel>
+        <sortOrder>4</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jak000003HbuH_Review_Candidate_Cards</localDeveloperName>
+    <masterLabel>Review Candidate Cards</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only retrieve and list structured Candidate Cards with details like skills, experience, education, and any identified data issues. You aren&apos;t able to modify or create new Candidate Cards.</scope>
+</GenAiPlugin>

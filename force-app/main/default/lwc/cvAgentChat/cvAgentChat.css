@@ -1,0 +1,35 @@
+.chat-log {
+    min-height: 520px;
+    max-height: 60vh;
+    overflow-y: auto;
+    background: linear-gradient(180deg, #f4f8fc 0%, #eef3f8 100%);
+}
+
+.bubble {
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.5rem;
+    max-width: 92%;
+}
+
+.bubble-user {
+    margin-left: auto;
+    background: #0b6bcb;
+    color: #fff;
+}
+
+.bubble-user .slds-text-title_caps,
+.bubble-user .slds-text-color_weak {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.bubble-agent {
+    margin-right: auto;
+    background: #ffffff;
+    border: 1px solid #d8e2ec;
+}
+
+.message-body {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+

@@ -1,0 +1,38 @@
+{
+  "unevaluatedProperties": false,
+  "properties": {
+    "success": {
+      "title": "Success",
+      "description": "Whether the grounded action succeeded",
+      "lightning:type": "lightning__booleanType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true
+    },
+    "message": {
+      "title": "Message",
+      "description": "Grounded human-readable result for the agent to relay to the recruiter",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true
+    },
+    "payloadJson": {
+      "title": "Payload JSON",
+      "description": "Structured evidence JSON from Candidate Cards",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true
+    },
+    "recordId": {
+      "title": "Record Id",
+      "description": "Primary record Id created or returned",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true
+    }
+  },
+  "lightning:type": "lightning__objectType"
+}

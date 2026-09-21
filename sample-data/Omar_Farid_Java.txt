@@ -1,0 +1,19 @@
+Omar Farid
+omar.farid@email.com
++971 50 123 4567
+Location: Dubai, UAE
+
+Profile
+Backend engineer specializing in Java microservices. 8+ years of experience.
+
+Skills
+Java, Spring Boot, SQL, AWS, REST, Kafka
+
+Experience
+Staff Java Engineer @ Horizon Labs - 2019 - Present
+- Scaled payment APIs to 2M daily transactions
+Java Developer @ ByteForge - 2015 - 2019
+- Built ETL pipelines and service mesh adapters
+
+Education
+AUC - BSc Computer Engineering - 2014

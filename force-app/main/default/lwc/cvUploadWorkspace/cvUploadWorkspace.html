@@ -1,0 +1,132 @@
+<template>
+    <lightning-card title="CV Review Workspace" icon-name="standard:people">
+        <div class="slds-p-around_medium">
+            <p class="slds-m-bottom_small">
+                Upload CVs to build Candidate Cards. We’ll pull out skills, experience, and gaps so you can
+                compare people and ask grounded questions.
+            </p>
+
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="cv-file-input">Choose CV files</label>
+                <div class="slds-form-element__control">
+                    <input
+                        id="cv-file-input"
+                        class="cv-file-input slds-file-selector__input slds-assistive-text"
+                        type="file"
+                        multiple
+                        accept={acceptedFormats}
+                        onchange={handleFilesChosen}
+                    />
+                    <label class="slds-file-selector__body" for="cv-file-input">
+                        <span class="slds-file-selector__button slds-button slds-button_neutral">Upload Files</span>
+                        <span class="slds-file-selector__text slds-medium-show">or drop files (use the button)</span>
+                    </label>
+                </div>
+            </div>
+
+            <template lwc:if={hasPendingFiles}>
+                <ul class="slds-m-top_x-small slds-m-bottom_small">
+                    <template for:each={selectedFileNames} for:item="file">
+                        <li key={file.id}>{file.name}</li>
+                    </template>
+                </ul>
+            </template>
+
+            <div class="slds-m-top_small">
+                <lightning-button
+                    variant="brand"
+                    label="Extract & process into Candidate Cards"
+                    onclick={handleProcess}
+                    disabled={uploading}
+                ></lightning-button>
+            </div>
+
+            <template lwc:if={statusMessage}>
+                <div class="slds-m-top_small slds-text-color_weak">{statusMessage}</div>
+            </template>
+
+            <template lwc:if={error}>
+                <div class="slds-text-color_error slds-m-top_small">{error}</div>
+            </template>
+
+            <template lwc:if={hasResults}>
+                <div class="slds-m-top_medium">
+                    <h3 class="slds-text-heading_small">Latest ingestion results</h3>
+                    <ul class="slds-m-top_x-small">
+                        <template for:each={results} for:item="row">
+                            <li key={row.rowKey}>
+                                {row.candidateName} — {row.parseStatus}: {row.message}
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+
+            <div class="slds-grid slds-wrap slds-m-top_large slds-gutters">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <h3 class="slds-text-heading_small">Candidate Cards</h3>
+                    <ul class="slds-has-dividers_bottom-space">
+                        <template for:each={candidates} for:item="c">
+                            <li key={c.Id} class="slds-item">
+                                <a href="#" data-id={c.Id} onclick={handleSelect}>
+                                    {c.Name}
+                                </a>
+                                <div class="slds-text-body_small">
+                                    {c.Parse_Status__c} · {c.Email__c} · {c.Location__c}
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <template lwc:if={hasSelection}>
+                        <h3 class="slds-text-heading_small">{selected.Name}</h3>
+                        <p class="slds-text-body_small slds-m-bottom_small">
+                            Parse: {selected.Parse_Status__c}<br />
+                            Years: {selected.Years_Experience__c}<br />
+                            Summary: {selected.Summary__c}
+                        </p>
+
+                        <h4 class="slds-text-title_caps">Uncertainty</h4>
+                        <pre class="cv-pre">{selected.Uncertainty_Summary__c}</pre>
+
+                        <h4 class="slds-text-title_caps slds-m-top_small">Skills</h4>
+                        <ul>
+                            <template for:each={skillRows} for:item="s">
+                                <li key={s.Id}>{s.Name} ({s.Confidence__c})</li>
+                            </template>
+                        </ul>
+
+                        <h4 class="slds-text-title_caps slds-m-top_small">Experience</h4>
+                        <ul>
+                            <template for:each={experienceRows} for:item="e">
+                                <li key={e.Id}>
+                                    {e.Title__c} @ {e.Company__c}
+                                    ({e.Start_Date_Text__c}–{e.End_Date_Text__c})
+                                </li>
+                            </template>
+                        </ul>
+
+                        <h4 class="slds-text-title_caps slds-m-top_small">Education</h4>
+                        <ul>
+                            <template for:each={educationRows} for:item="ed">
+                                <li key={ed.Id}>{ed.Degree__c} | {ed.School__c}</li>
+                            </template>
+                        </ul>
+
+                        <h4 class="slds-text-title_caps slds-m-top_small">Data issues</h4>
+                        <ul>
+                            <template for:each={issueRows} for:item="issue">
+                                <li key={issue.Id}>
+                                    [{issue.Issue_Type__c}/{issue.Severity__c}] {issue.Field_Path__c}:
+                                    {issue.Details__c}
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

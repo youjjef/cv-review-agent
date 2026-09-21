@@ -1,0 +1,14 @@
+Alex Candidate
+Location: Remote
+
+Summary
+Versatile technologist. Claims 10 years experience and also 4 years experience in different sections.
+10 years of experience in consulting. 4 years of experience in engineering.
+
+Experience
+Consultant - Acme - 2018 - 2022
+Engineer - Acme - 2019 - 2023
+ overlapping roles at same company with conflicting timelines
+
+Education
+Some University - MBA - 2025
