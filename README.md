@@ -1,6 +1,6 @@
 # CV Review Agent
 
-Recruiter-facing Salesforce app for Ace Clouding: upload CVs, build structured **Candidate Cards**, then ask grounded questions / compare / score / bookmark without inventing facts that aren’t on the card.
+Recruiter-facing Salesforce app: upload CVs, build structured **Candidate Cards**, then ask grounded questions / compare / score / bookmark without inventing facts that aren’t on the card.
 
 Built and demoed on Agentforce DE org alias `cv-agent-de`  
 (`yousseffj78.b0ec86663f9c@agentforce.com`).
