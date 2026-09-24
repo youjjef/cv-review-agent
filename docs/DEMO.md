@@ -52,7 +52,6 @@ Same Apex underneath. For a raw Apex smoke:
 ```bash
 sf apex run --file scripts/apex/smokeAgentActions.apex --target-org cv-agent-de
 ```
-
 ---
 
 ## 4. Compare / score expectations
