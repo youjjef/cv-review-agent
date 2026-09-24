@@ -56,7 +56,6 @@ sf apex run --file scripts/apex/smokeAgentActions.apex --target-org cv-agent-de
 
 ## 4. Compare / score expectations
 
-Default rubric for Salesforce-ish roles: skills like Apex / LWC / SOQL, min years 3.
 
 - Sara vs Omar for Salesforce → Sara should come out ahead; Omar’s trade-offs call out weaker Salesforce skill coverage.
 - Top-N for “Salesforce Consultant” → scored pool, top N only in the chat text, with breakdowns.
